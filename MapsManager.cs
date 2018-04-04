@@ -18,7 +18,7 @@ public class MapsManager : MonoBehaviour {
 		kondisi3 = false;
 		kondisi4 = false;
 		kondisi5 = false;
-
+		// Set The Function of Save or Delete Data of Application
 		if (isDeleteData)
 			DeleteData ();
 		LoadData ();
@@ -80,22 +80,6 @@ public class MapsManager : MonoBehaviour {
 			PlayerPrefs.SetInt ("maps5", 0);
 		}
 
-
-//		if (kondisi3 == true) {
-//			kon3 = 1;
-//		}
-//		if (kondisi4 == true) {
-//			kon4 = 1;
-//		}
-//		if (kondisi5 == true) {
-//			kon5 = 1;
-//		}
-
-
-//		PlayerPrefs.SetInt ("maps2", kon2 == 1 ? 1 : 0);
-//		PlayerPrefs.SetInt ("maps3", kon3 == 1 ? 1 : 0);
-//		PlayerPrefs.SetInt ("maps4", kon4 == 1 ? 1 : 0);
-//		PlayerPrefs.SetInt ("maps5", kon5 == 1 ? 1 : 0);
 
 	}
 
