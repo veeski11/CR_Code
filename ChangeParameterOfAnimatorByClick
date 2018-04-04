@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ButtonChangeParameter : MonoBehaviour {
+
+    public Animator parameters; // Add gameobject that have animation
+    bool kondisi;	
+    public string namaparam;	// the name of parameter u want change
+
+    public void param()
+    {
+		kondisi = parameters.GetBool(namaparam);
+
+        if (kondisi == false)
+        {
+			parameters.SetBool(namaparam, true);
+        }
+
+        else if (kondisi == true)
+        {
+			parameters.SetBool(namaparam, false);
+        }
+
+
+    }
+
+
+}
