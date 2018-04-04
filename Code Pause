@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PauseMenu : MonoBehaviour {
+
+	public string mainMenus;
+	public GameObject pauseee;
+	public void pausegame(){
+		Time.timeScale = 0f;
+		pauseee.SetActive (true);
+	}
+
+	public void resume(){
+		Time.timeScale = 1f;
+		pauseee.SetActive (false);
+	}
+
+	public void restart(){
+		Time.timeScale = 1f;
+		pauseee.SetActive (false);
+		FindObjectOfType<GameManager> ().reset();
+	}
+
+	public void Quittomenu(){
+		Time.timeScale = 1f;
+    //Scene GO to somescene;
+		Application.LoadLevel(mainMenus);
+	}
+}
