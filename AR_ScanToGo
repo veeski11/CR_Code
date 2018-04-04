@@ -1,0 +1,54 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class Test1GameManager : MonoBehaviour {
+    public Renderer rend;
+
+    public GameObject test1;
+    public List<GameObject> sc = new List<GameObject>();
+
+    // Use this for initialization
+    void Start () {
+        rend = GetComponent<Renderer>();
+
+    }
+
+    // Update is called once per frame
+    void Update () {
+        if (rend.enabled)
+        {
+            switch (test1.transform.name)
+            {
+                case "GO1":
+                    SceneManager.LoadScene(2);
+                    break;
+                case "GO2":
+                    SceneManager.LoadScene(3);
+                    break;
+                case "GO3":
+                    SceneManager.LoadScene(4);
+                    break;
+                case "GO4":
+                    SceneManager.LoadScene(5);
+                    break;
+                case "GO5":
+                    SceneManager.LoadScene(6);
+                    break;
+                case "GO6":
+                    SceneManager.LoadScene(7);
+                    break;
+                case "GO7":
+                    SceneManager.LoadScene(8);
+                    break;
+                case "GO8":
+                    SceneManager.LoadScene(9);
+                    break;
+            }
+        }
+        else
+        {
+        }
+	}
+}
